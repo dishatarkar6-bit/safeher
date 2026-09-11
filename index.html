@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SafeHer | Women's Safety</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fff7fa;
+    color:#222;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:#8e2458;
+    color:white;
+    padding:18px 7%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:22px;
+    font-size:15px;
+}
+
+.hero{
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px 20px;
+    background:linear-gradient(135deg,#ffe1ed,#fff);
+}
+
+.hero-content{
+    max-width:800px;
+}
+
+.badge{
+    display:inline-block;
+    background:#f7c5d9;
+    color:#8e2458;
+    padding:9px 18px;
+    border-radius:30px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:52px;
+    color:#8e2458;
+    margin-bottom:18px;
+}
+
+.hero h1 span{
+    color:#e53935;
+}
+
+.hero p{
+    font-size:18px;
+    line-height:1.7;
+    color:#555;
+}
+
+.sos{
+    margin-top:30px;
+    width:155px;
+    height:155px;
+    border-radius:50%;
+    border:8px solid #f7b7b7;
+    background:#e53935;
+    color:white;
+    font-size:28px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 10px 30px rgba(229,57,53,.35);
+    transition:.2s;
+}
+
+.sos:hover{
+    transform:scale(1.06);
+}
+
+.section{
+    padding:65px 7%;
+}
+
+.title{
+    text-align:center;
+    color:#8e2458;
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#666;
+    max-width:650px;
+    margin:0 auto 35px;
+    line-height:1.6;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:22px;
+}
+
+.card{
+    background:white;
+    padding:28px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 7px 22px rgba(0,0,0,.08);
+    transition:.2s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.icon{
+    font-size:45px;
+}
+
+.card h3{
+    color:#8e2458;
+    margin:15px 0 10px;
+}
+
+.card p{
+    color:#666;
+    line-height:1.6;
+}
+
+.card button{
+    margin-top:18px;
+    padding:11px 20px;
+    border:0;
+    border-radius:9px;
+    background:#8e2458;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+.problem{
+    background:#fff0f5;
+}
+
+.steps{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.step{
+    background:white;
+    padding:28px;
+    border-radius:18px;
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
+}
+
+.number{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#8e2458;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.step h3{
+    color:#8e2458;
+    margin-bottom:10px;
+}
+
+.step p{
+    color:#666;
+    line-height:1.6;
+}
+
+.tips{
+    background:#8e2458;
+    color:white;
+}
+
+.tips .title{
+    color:white;
+}
+
+.tip-list{
+    max-width:750px;
+    margin:auto;
+    display:grid;
+    gap:14px;
+}
+
+.tip{
+    background:rgba(255,255,255,.12);
+    padding:15px 20px;
+    border-radius:12px;
+}
+
+.cta{
+    text-align:center;
+    background:linear-gradient(135deg,#ffe0ec,#fff);
+}
+
+.cta h2{
+    color:#8e2458;
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#321021;
+    color:white;
+}
+
+@media(max-width:700px){
+
+    header{
+        padding:15px 5%;
+    }
+
+    nav{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section{
+        padding:50px 5%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🛡️ SafeHer</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#features">Features</a>
+<a href="#how">How It Works</a>
+<a href="#tips">Safety Tips</a>
+</nav>
+
+</header>
+
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<div class="badge">🌸 Women's Safety Platform</div>
+
+<h1>Your Safety.<br><span>Your Power.</span></h1>
+
+<p>
+SafeHer is a student-built women's safety platform that brings
+emergency assistance, location support and safety resources together
+in one simple place.
+</p>
+
+<button class="sos" onclick="sendSOS()">🚨 SOS</button>
+
+<p style="margin-top:15px;font-weight:bold;">
+Tap SOS during an emergency
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section" id="features">
+
+<h2 class="title">Emergency Features</h2>
+
+<p class="subtitle">
+Quick-access tools designed to help users reach emergency support
+when every second matters.
+</p>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">📞</div>
+<h3>Emergency Call</h3>
+<p>Quickly access India's emergency number.</p>
+<button onclick="callEmergency()">Call 112</button>
+</div>
+
+<div class="card">
+<div class="icon">📍</div>
+<h3>My Location</h3>
+<p>Find your current location and open it on Google Maps.</p>
+<button onclick="getLocation()">Get Location</button>
+</div>
+
+<div class="card">
+<div class="icon">👥</div>
+<h3>Trusted Contact</h3>
+<p>Keep a trusted person in mind when you need support.</p>
+<button onclick="contactAlert()">Contact Help</button>
+</div>
+
+<div class="card">
+<div class="icon">🏥</div>
+<h3>Nearby Help</h3>
+<p>Quickly search for nearby police stations and hospitals.</p>
+<button onclick="nearbyHelp()">Find Help</button>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section problem">
+
+<h2 class="title">The Problem We Address</h2>
+
+<p class="subtitle">
+In an unsafe situation, people may panic and waste valuable time
+searching for the right emergency service or sharing their location.
+SafeHer aims to make essential safety actions easier to access.
+</p>
+
+</section>
+
+
+<section class="section" id="how">
+
+<h2 class="title">How SafeHer Works</h2>
+
+<p class="subtitle">
+Three simple steps to access important safety support.
+</p>
+
+<div class="steps">
+
+<div class="step">
+<div class="number">1</div>
+<h3>Open SafeHer</h3>
+<p>
+Access the platform from a phone or computer whenever safety support
+is needed.
+</p>
+</div>
+
+<div class="step">
+<div class="number">2</div>
+<h3>Choose an Action</h3>
+<p>
+Use SOS, emergency call, location sharing or nearby help according
+to the situation.
+</p>
+</div>
+
+<div class="step">
+<div class="number">3</div>
+<h3>Reach Support</h3>
+<p>
+Connect with emergency services, trusted people or nearby assistance.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section tips" id="tips">
+
+<h2 class="title">🛡️ Safety Tips</h2>
+
+<div class="tip-list">
+
+<div class="tip">📱 Keep your phone charged and accessible.</div>
+
+<div class="tip">👥 Share your travel plans with someone you trust.</div>
+
+<div class="tip">📍 Keep location services available when travelling.</div>
+
+<div class="tip">🚶 Avoid isolated areas whenever possible.</div>
+
+<div class="tip">❤️ Trust your instincts if a situation feels unsafe.</div>
+
+</div>
+
+</section>
+
+
+<section class="section cta">
+
+<h2>Safety Starts With Awareness.</h2>
+
+<p class="subtitle">
+SafeHer is a student innovation project focused on making
+women's safety resources easier to access.
+</p>
+
+<button class="card button" onclick="nearbyHelp()">
+Find Help Near Me
+</button>
+
+</section>
+
+
+<footer>
+
+<p>🛡️ SafeHer © 2026</p>
+
+<p style="margin-top:8px;">
+Student Innovation Project • Hack With Mathura
+</p>
+
+</footer>
+
+
+<script>
+
+function sendSOS(){
+
+alert(
+"🚨 SOS ACTIVATED!\\n\\n" +
+"Emergency assistance should be contacted immediately."
+);
+
+window.location.href="tel:112";
+
+}
+
+
+function callEmergency(){
+
+window.location.href="tel:112";
+
+}
+
+
+function getLocation(){
+
+if(navigator.geolocation){
+
+navigator.geolocation.getCurrentPosition(
+
+function(position){
+
+let latitude=position.coords.latitude;
+let longitude=position.coords.longitude;
+
+alert(
+"📍 Location Found!\\n\\n" +
+"Latitude: "+latitude+
+"\\nLongitude: "+longitude
+);
+
+window.open(
+"https://www.google.com/maps?q="+
+latitude+","+longitude,
+"_blank"
+);
+
+},
+
+function(){
+
+alert(
+"Location permission was not allowed. " +
+"Please allow location access."
+);
+
+}
+
+);
+
+}
+
+else{
+
+alert("Location is not supported by this browser.");
+
+}
+
+}
+
+
+function contactAlert(){
+
+alert(
+"👥 Trusted Contact\\n\\n" +
+"Demo feature: A trusted contact can be connected here."
+);
+
+}
+
+
+function nearbyHelp(){
+
+window.open(
+"https://www.google.com/maps/search/police+station+near+me",
+"_blank"
+);
+
+}
+
+</script>
+
+</body>
+</html>
